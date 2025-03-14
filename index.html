@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <!--copied from tailwindcss, Installation section, Play CDN-->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+</head>
+<body class=" font-display:Georgia flex flex-col min-h-screen text-gray-600">
+<!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black text-yellow-100 flex justify-between items-center px-8 z-50">
+        <div class="text-3xl font-bold">MyBrand</div>
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#hero" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 cursor-pointer">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+            <li><a href="#sercices" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
+            <li><a href="#conatct" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Contact</a></li>
+        </ul>
+        <div class="md:hidden text-2xl cursor-pointer text-yellow-100">&#9776;</div>
+    </nav>
+<!-- Hero section -->
+    <header  class="h-screen bg-cover bg-center flex items-center justify-center text-black text-center" style="background-image: url('assets/hero\ image.jpg');">
+        <div class="bg-yellow-100/40 text-xl p-8 rounded-lg" > <!-- bg-opacity-40 -->
+            <h1 class="text-4xl font-bold">Welcome to my website</h1>
+                <p class="mt-5">Your personal tutor on tailwind CSS</p>
+                <a href="#contact" class="inline-block mt-5 bg-black/60 text-yellow-100 px-6 py-3 rounded-full hover:bg-yellow-400 transition">Contact Us</a>
+        </div>
+    </header>
+<!-- Main section -->
+    <main  class="text-black text-flex">
+        <section class="inline-block">
+            <h2 class="font-bold text-xl">About Us</h2>
+            <p class="px-2 py-4">We specialze in creating responsive websites that adapt to any screen</p>
+        </section>
+        <section class="inline-block">
+            <h2 class="font-bold text-xl">Our Services</h2>
+            <div class=" grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20">
+                    <h3 class="font-semibold text-center">Web Design</h3>
+                    <p class="text-center">We do modern and resposive web design for businesses</p>
+                </div>
+                <div class="bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20">
+                    <h3 class="font-semibold text-center">SEO</h3>
+                    <p class="text-center">Boost your website's visibility on search engines through search engine optimization</p>
+                </div>
+                <div class="bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20">
+                    <h3 class="font-semibold text-center">E-Commerce</h3>
+                    <p class="text-center">Custom online store solutions tailored to your needs</p>
+                </div>
+            </div>
+            <p></p>
+        </section>
+    </main>
+</body> 
+</html>
