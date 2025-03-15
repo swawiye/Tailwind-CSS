@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS</title>
     <!--copied from tailwindcss, Installation section, Play CDN-->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body class=" font-display:Georgia flex flex-col min-h-screen text-gray-600">
+<body class="flex flex-col min-h-screen text-gray-600">
+    <script src="https://kit.fontawesome.com/b848093772.js" crossorigin="anonymous"></script>
 <!-- Navbar -->
     <nav class="fixed top-0 w-full bg-black text-yellow-100 flex justify-between items-center px-8 z-50">
         <div class="text-3xl font-bold">MyBrand</div>
         <ul class="hidden md:flex space-x-6">
             <li><a href="#hero" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 cursor-pointer">Home</a></li>
             <li><a href="#about" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
-            <li><a href="#sercices" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
-            <li><a href="#conatct" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Contact</a></li>
+            <li><a href="#services" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
+            <li><a href="#contact" class="hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Contact</a></li>
         </ul>
         <div class="md:hidden text-2xl cursor-pointer text-yellow-100">&#9776;</div>
     </nav>
@@ -29,28 +30,94 @@
     </header>
 <!-- Main section -->
     <main  class="text-black text-flex">
-        <section class="inline-block">
-            <h2 class="font-bold text-xl">About Us</h2>
-            <p class="px-2 py-4">We specialze in creating responsive websites that adapt to any screen</p>
+        <section id="about" class="inline-block">
+            <h2 class="font-bold text-2xl">About Us</h2>
+            <p class="text-gray-900 px-2 py-4">We specialize in creating responsive websites that adapt to any screen</p>
         </section>
-        <section class="inline-block">
-            <h2 class="font-bold text-xl">Our Services</h2>
-            <div class=" grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20">
-                    <h3 class="font-semibold text-center">Web Design</h3>
-                    <p class="text-center">We do modern and resposive web design for businesses</p>
-                </div>
-                <div class="bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20">
-                    <h3 class="font-semibold text-center">SEO</h3>
-                    <p class="text-center">Boost your website's visibility on search engines through search engine optimization</p>
-                </div>
-                <div class="bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20">
-                    <h3 class="font-semibold text-center">E-Commerce</h3>
-                    <p class="text-center">Custom online store solutions tailored to your needs</p>
-                </div>
+        <section id="services" class="mb-10"> <!-- Makes cards lie side by side:inline-block -->
+            <h2 class="font-bold text-2xl">Our Services</h2>
+            <div class="flex w-full justify-center mt-5 gap-6 cursor-pointer text-center"> <!-- 'grid grid-cols-1 md:grid-cols-3 gap-6' makes the cards lie side by side, flex(makes images lie side by side) -->
+                    <div class="relative w-full md:w-1/3 h-64 rounded-lg overflow-hidden shadow-lg group"> <!-- Card effect formatting: bg-yellow-100 shadow-lg rounded-lg p-4 mt-3 hover:bg-yellow-400 transition md:20 -->
+                        <img src="assets/cathedral glass.jpg" alt="Web Design" class="absolute inset-0  w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white transform scale-0 group-hover:scale-100 transition-transform-300 z-10"> 
+                            <h3 class="font-semibold text-center text-xl">Web Design</h3>
+                            <p class="text-center mt-3">We do modern and resposive web design for businesses</p>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-auto md:w-1/3 h-64 rounded-lg overflow-hidden shadow-lg group">
+                        <img src="assets/mushrooms.jpg" alt="SEO" class="absolute inset-0  w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white transform scale-0 group-hover:scale-100 transition-transform-300 z-10"> 
+                            <h3 class="font-semibold text-center text-xl">SEO</h3>
+                            <p class="text-center mt-3">Boost your website's visibility on search engines through search engine optimization</p>
+                        </div>
+                    </div>
+                    <div class="relative w-full md:w-1/3 h-64 rounded-lg overflow-hidden shadow-lg group">
+                        <img src="assets/orchid.jpg" alt="E-Commerce" class="absolute inset-0  w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white transform scale-0 group-hover:scale-100 transition-transform-300 z-10"> 
+                            <h3 class="font-semibold text-center text-xl">E-Commerce</h3>
+                            <p class="text-center mt-3">Custom online store solutions tailored to your needs</p>
+                        </div>
+                    </div>
             </div>
-            <p></p>
+        </section>
+        <section id="contact" class="flex-col mb-10">
+            <div class="flex justify-center mt-5 gap-6 cursor-pointer bg-yellow-100">
+                <div class="w-full md:w-1/3">
+                    <h2 class="text-2xl font-semibold text-center">Contact Us</h2>
+                    <form required action="" method="POST" class="flex flex-col gap-1 border border-yellow-400 p-4">
+                        <label class="font-semibold" for="name">Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" class="p-2 rounded-lg border border-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        
+                        <label class="font-semibold" for="email">Email</label>               
+                            <input type="email" name="email" placeholder="Enter your email" class="p-2 rounded-lg border border-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400">
+        
+                        <label class="font-semibold" for="password">Password</label>
+                            <input type="password" name="password" placeholder="Enter your password" class="p-2 rounded-lg border border-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400">
+    
+                        <label class="font-semibold" for="password">Message</label>
+                        <textarea required name="message" id="" placeholder="Any feedback?" class="p-2 rounded-lg border border-black focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400"></textarea>
+    
+                        <button type="submit" class="bg-yellow-400 text-black w-20 px-4 py-2 inline-block mt-2 rounded-full hover:bg-green-400">Submit</button>
+                </form>
+                </div>
+             </div>
         </section>
     </main>
+<!-- Footer -->
+ <footer class="bg-black text-white py-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- About Section -->
+       <div>
+          <h3 class="text-lg font-semibold mb-2">About</h3>
+          <p class="text-yellow-100">We are dedicated to providing top-notch web services</p>
+       </div>
+      <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+          <ul class="space-y-1" >
+              <li><a href="#hero" class="text-yellow-100 hover:text-white transition">Home</a></li>
+              <li><a href="#about" class="text-yellow-100 hover:text-white transition">About</a></li>
+              <li><a href="#services" class="text-yellow-100 hover:text-white transition">Services</a></li>
+              <li><a href="contact" class="text-yellow-100 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+      <!-- Contact Section -->
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Contact</h3>
+          <p class="text-yellow-100">Email address: mybrand@gmail.com</p>
+          <p class="text-yellow-100">Phone number: +123 456 789</p>
+        </div>
+        <!-- Social Media Icons --> 
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+          <div class="flex space-x-4">
+              <a href="#" class="text-yellow-100 hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 cursor-pointer"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#" class="text-yellow-100 hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="text-yellow-100 hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="text-yellow-100 hover:text-white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-white after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+    </div>  
+ </footer>
 </body> 
 </html>
